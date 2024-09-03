@@ -1,0 +1,14 @@
+split:
+  # Parameters for splitting the dataset
+  random_seed: 39
+  test_size: 0.2
+  dataset_path: data/diabetes_prediction_dataset.csv
+
+encoding:
+  # Columns for one hot encoding
+  columns:
+    - gender
+    - smoking_history
+
+target:
+  name: diabetes

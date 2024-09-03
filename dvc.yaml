@@ -1,0 +1,15 @@
+stages:
+  preprocess:
+    cmd: python src/preprocess_diabetes_dataset.py
+    deps:
+      - data/diabetes_prediction_dataset.csv
+      - src/preprocess_diabetes_dataset.py
+      - params.yaml
+    outs:
+      - data/processed_train_data.csv
+      - data/processed_test_data.csv
+    params:
+      - split.random_seed
+      - split.test_size
+      - encoding.columns
+      - target.name
