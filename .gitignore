@@ -1,1 +1,4 @@
 .DS_Store
+metaflow_scripts/.metaflow/
+metaflow_scripts/__pycache__/
+metaflow_scripts/mlruns/
