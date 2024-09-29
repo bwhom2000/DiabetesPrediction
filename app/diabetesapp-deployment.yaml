@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: diabetesapp-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: diabetesapp
+  template:
+    metadata:
+      labels:
+        app: diabetesapp
+    spec:
+      containers:
+      - name: diabetesapp
+        image: diabetesapp
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 8080

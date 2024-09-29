@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: diabetesapp-service
+spec:
+  type: NodePort
+  selector:
+    app: diabetesapp
+  ports:
+  - protocol: TCP
+    port: 8080
+    targetPort: 8080
+    nodePort: 30002  # This is the port you will use to access MLflow
